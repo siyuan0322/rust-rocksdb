@@ -2446,6 +2446,10 @@ impl Options {
                 options.bloom_bits_per_key,
                 options.hash_table_ratio,
                 options.index_sparseness,
+                options.huge_page_tlb_size,
+                options.encoding_type,
+                options.full_scan_mode,
+                options.store_index_in_file,
             );
         }
     }
@@ -3592,6 +3596,10 @@ pub struct PlainTableFactoryOptions {
     pub bloom_bits_per_key: i32,
     pub hash_table_ratio: f64,
     pub index_sparseness: usize,
+    pub huge_page_tlb_size: usize,
+    pub encoding_type: i8,
+    pub full_scan_mode: u8,
+    pub store_index_in_file: u8,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
