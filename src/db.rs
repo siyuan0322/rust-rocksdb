@@ -288,6 +288,7 @@ impl DBInner for DBWithThreadModeInner {
 impl Drop for DBWithThreadModeInner {
     fn drop(&mut self) {
         unsafe {
+            println!("Dropping DBWithThreadModeInner");
             ffi::rocksdb_close(self.inner);
         }
     }
